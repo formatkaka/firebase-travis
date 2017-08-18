@@ -1,0 +1,11 @@
+language: node_js
+
+before_deploy: "echo 'Ready'"
+
+
+deploy: 
+  provider: firebase
+  token: $FIREBASE_DEPLOY_TOKEN
+  project: travis-testing  
+
+after_deploy: "echo 'Deployment process completed!!'"
